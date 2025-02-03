@@ -2,6 +2,9 @@
   --main-bg-color: #222831;
   --container-color: #393E46;
   --blue: #00ADB5;
+  --edit-btn-hover-color: #15c6cf;
+  --delete-btn-hover-color: rgb(238, 108, 108);
+  --delete-btn-color: rgb(238, 80, 80);
 }
 .lobster-regular {
   font-family: "Lobster", serif;
@@ -55,27 +58,59 @@ a {
   font-size: 30px;
   border: 1px solid var(--container-color);
   border-radius: 10px;
-  box-shadow:  0px 2px 6px 6px var(--blue);
+  box-shadow:  0px 2px 6px 6px rgb(66, 66, 66);
+  transition: background-color .2s;
+}
+
+.add-btn:hover {
+  background-color: #505357;
 }
 
 ul {
-  list-style: none;
+  list-style: square;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  
 }
 
 .edit-btn {
-  background-color: var(--container-color);
+  background: transparent;
   color: white;
-  border: 1px solid var(--container-color);
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  transition: background-color .2s;
+}
+
+.edit-btn:hover {
+  background-color: var(--edit-btn-hover-color);
+  color: black;
 }
 
 .delete-btn {
   border: 1px solid rgb(238, 80, 80);
   background: transparent;
-  color: rgb(238, 80, 80);
+  color: var(--delete-btn-color);
+  border-radius: 5px;
+  transition: background-color .2s;
+}
+
+.delete-btn:hover {
+  background-color: var(--delete-btn-hover-color);
+  color: white;
 }
 
 .btn {
   font-size: medium;
+  margin-left: 5px;
+}
+
+.library-container {
+  background-color: var(--container-color);
+  border-radius: 10px;
+  min-width: 70%;
+  display: flex;
+  flex-direction: column;
 }
