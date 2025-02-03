@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --main-bg-color: #222831;
+  --container-color: #393E46;
+  --blue: #00ADB5;
+}
+.lobster-regular {
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container {
+  background-color: var(--main-bg-color);
+  font-family: "Lobster";
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  color: var(--blue);
+  text-shadow: 1px 2px 2px var(--blue);
+  
 }
 
-.card {
-  padding: 2em;
+footer {
+  color: white;
+  background-color: var(--container-color);
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  font-size: 1.2em;
+  padding: 2%;
 }
 
-.read-the-docs {
-  color: #888;
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.add-btn {
+  background-color: var(--container-color);
+  color: white;
+  padding: 2%;
+  font-size: 30px;
+  border: 1px solid var(--container-color);
+  border-radius: 10px;
+  box-shadow:  0px 2px 6px 6px var(--blue);
+}
+
+ul {
+  list-style: none;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.edit-btn {
+  background-color: var(--container-color);
+  color: white;
+  border: 1px solid var(--container-color);
+}
+
+.delete-btn {
+  border: 1px solid rgb(238, 80, 80);
+  background: transparent;
+  color: rgb(238, 80, 80);
+}
+
+.btn {
+  font-size: medium;
 }
