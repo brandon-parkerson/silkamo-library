@@ -3,6 +3,7 @@ import React from "react";
 export default function Library({ books, onDelete, onEdit }) {
     return (
         <div className="library-container">
+            <h2 className="library-title">My Books</h2>
             <ul>
                 {books.length === 0 ? (
                     <p style={{ color: 'white', textAlign: 'center' }}>No books here yet.</p>

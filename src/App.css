@@ -159,7 +159,15 @@ ul {
   display: flex;
   flex-direction: column;
   align-self: center;
-  
+}
+
+li {
+  margin-top: 5%;
+}
+
+.library-title {
+  text-align: center;
+  color: white;
 }
 
 .edit-btn {
