@@ -1,14 +1,21 @@
 import React from "react";
 
-export default function Library() {
+export default function Library({ books, onDelete, onEdit }) {
     return (
         <div className="library-container">
             <ul>
-                <li>The Hobbit by J.R.R Tolkein | 300 pages | 5/5 <button className="edit-btn btn">Edit</button><button className="delete-btn btn">Delete</button>
-                </li>
-                <li>The Hobbit by J.R.R Tolkein | 300 pages | 5/5 <button className="edit-btn btn">Edit</button><button className="delete-btn btn">Delete</button></li>
+                {books.length === 0 ? (
+                    <p style={{ color: 'white', textAlign: 'center' }}>No books here yet.</p>
+                ) : (
+                    books.map((book, index) => (
+                        <li key={index}>
+                            {book.title} by {book.author} | {book.pages} pages | {book.rating}/5
+                            
+                            <button className="delete-btn btn" onClick={() => onDelete(index)}>Delete</button>
+                        </li>
+                    ))
+                )}
             </ul>
-            
         </div>
-    )
+    );
 }
