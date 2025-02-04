@@ -10,7 +10,7 @@ export default function Library({ books, onDelete, onEdit }) {
                 ) : (
                     books.map((book, index) => (
                         <li key={index}>
-                            {book.title} by {book.author} | {book.pages} pages | {book.rating}/5
+                            {`"${book.title}"`} by {book.author} | {book.pages} pages | {book.rating}/5
                             
                             <button className="delete-btn btn" onClick={() => onDelete(index)}>Delete</button>
                         </li>
