@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Library from './components/Library';
+import ribbonImage from "./assets/images/ribbon.png"; // Adjust path based on file location
+
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -83,6 +85,8 @@ function App() {
     <div className='app-container'>
       <div className="title-container">
         <h1>The Thriller Nook</h1>
+        <img src={ribbonImage} alt="ribbon" className='ribbon'/>
+
       </div>
 
       <button className='add-btn' onClick={() => setShowForm(true)}>Add Book</button>
