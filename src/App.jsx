@@ -82,7 +82,7 @@ function App() {
   return (
     <div className='app-container'>
       <div className="title-container">
-        <h1>Silkamo Library</h1>
+        <h1>The Thriller Nook</h1>
       </div>
 
       <button className='add-btn' onClick={() => setShowForm(true)}>Add Book</button>
